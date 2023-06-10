@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Events Example</title>
+        <style>
+            h1 {
+                text-align: center;
+                color: red;
+            }
+            table {
+                margin: 20px auto;
+                border-collapse: collapse;
+                width: 80%;
+                text-align: center;
+            }
+            th,
+            td {
+                padding: 10px;
+                border: 1px solid black;
+            }
+            th {
+                background-color: #008cba;
+                color: white;
+            }
+            input[type="text"],
+            input[type="submit"] {
+                padding: 5px;
+                margin-bottom: 10px;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Form Events</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>onsubmit</td>
+                    <td>Tetiklendiğinde, bir form gönderildiğinde çalışır.</td>
+                    <td>
+                        <form onsubmit="alert('Form submitted');">
+                            <input type="text" placeholder="Enter your name" />
+                            <input type="submit" value="Submit" />
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>onreset</td>
+                    <td>Tetiklendiğinde, bir form sıfırlandığında çalışır.</td>
+                    <td>
+                        <form onreset="alert('Form reset');">
+                            <input type="text" placeholder="Enter your name" />
+                            <input type="reset" value="Reset" />
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>onfocus</td>
+                    <td>
+                        Tetiklendiğinde, bir form elemanına odaklandığınızda
+                        çalışır.
+                    </td>
+                    <td>
+                        <form>
+                            <input
+                                type="text"
+                                placeholder="Enter your name"
+                                onfocus="alert('Input focused');" />
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>onchange</td>
+                    <td>
+                        Tetiklendiğinde, bir form elemanı değeri değiştiğinde
+                        çalışır.
+                    </td>
+                    <td>
+                        <form>
+                            <input
+                                type="text"
+                                placeholder="Enter your name"
+                                onchange="alert('Input value changed');" />
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>onblur</td>
+                    <td>
+                        Tetiklendiğinde, bir form elemanından ayrıldığınızda
+                        çalışır.
+                    </td>
+                    <td>
+                        <form>
+                            <input
+                                type="text"
+                                placeholder="Enter your name"
+                                onblur="alert('Input blurred');" />
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>onselect</td>
+                    <td>
+                        Tetiklendiğinde, bir form elemanı seçildiğinde çalışır.
+                    </td>
+                    <td>
+                        <form>
+                            <input
+                                type="text"
+                                value="Select me!"
+                                onselect="alert('Input selected');" />
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            // JavaScript kodu
+            // Herhangi bir JavaScript olay dinleyicisi eklememiz gerekmez çünkü form olayları
+            // doğrudan HTML'de tanımlanabilir.
+        </script>
+    </body>
+</html>
